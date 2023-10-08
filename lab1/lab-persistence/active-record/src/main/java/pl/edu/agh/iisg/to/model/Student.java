@@ -25,10 +25,7 @@ public class Student {
     }
 
     public static Optional<Student> create(final String firstName, final String lastName, final int indexNumber) {
-        // TODO
-        String sql = "INSERT INTO students (first_name, last_name, index_number) VALUES ('?' , '?', '');";
-
-        // TODO
+        String sql = "INSERT INTO student (first_name, last_name, index_number) VALUES (?, ?, ?)";
         // it is important to maintain the correct order of the variables
         Object[] args = { firstName, lastName, indexNumber };
 
@@ -41,8 +38,19 @@ public class Student {
     }
 
     public static Optional<Student> findByIndexNumber(final int indexNumber) {
-        // TODO
-        return Optional.empty();
+        String sql = "SELECT * FROM student WHERE index_number = ?";
+        Object[] args = { indexNumber };
+        try (ResultSet result = QueryExecutor.read(sql, args)) {
+            if (!result.next())
+                return Optional.empty();
+
+            int id = result.getInt("id");
+            String firstName = result.getString("first_name"),
+                   lastName  = result.getString("last_name");
+            return Optional.of(new Student(id, firstName, lastName, indexNumber));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static Optional<Student> findById(final int id) {
