@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.edu.agh.iisg.to.OrmTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-09T16:00:53" hostname="macbook" time="1.041">
+<testsuite name="pl.edu.agh.iisg.to.OrmTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-09T21:24:30" hostname="macbook" time="0.722">
   <properties/>
-  <testcase name="findStudentIndexTest()" classname="pl.edu.agh.iisg.to.OrmTest" time="1.041"/>
+  <testcase name="gradeStudentTest()" classname="pl.edu.agh.iisg.to.OrmTest" time="0.722"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Oct 09, 2023 6:00:53 PM org.hibernate.Version logVersion
+  <system-err><![CDATA[Oct 09, 2023 11:24:30 PM org.hibernate.Version logVersion
 INFO: HHH000412: Hibernate Core {5.3.20.Final}
-Oct 09, 2023 6:00:53 PM org.hibernate.cfg.Environment <clinit>
+Oct 09, 2023 11:24:30 PM org.hibernate.cfg.Environment <clinit>
 INFO: HHH000206: hibernate.properties not found
-Oct 09, 2023 6:00:53 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+Oct 09, 2023 11:24:30 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
 INFO: HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-Oct 09, 2023 6:00:53 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+Oct 09, 2023 11:24:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
 WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-Oct 09, 2023 6:00:53 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+Oct 09, 2023 11:24:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:orm-test.db]
-Oct 09, 2023 6:00:53 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+Oct 09, 2023 11:24:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001001: Connection properties: {password=****, user=}
-Oct 09, 2023 6:00:53 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+Oct 09, 2023 11:24:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
 INFO: HHH10001003: Autocommit mode: false
-Oct 09, 2023 6:00:53 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+Oct 09, 2023 11:24:30 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
 INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
-Oct 09, 2023 6:00:54 PM org.hibernate.dialect.Dialect <init>
+Oct 09, 2023 11:24:30 PM org.hibernate.dialect.Dialect <init>
 INFO: HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
-Oct 09, 2023 6:00:54 PM org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl useContextualLobCreation
+Oct 09, 2023 11:24:30 PM org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl useContextualLobCreation
 INFO: HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-Oct 09, 2023 6:00:54 PM org.hibernate.id.enhanced.TableGenerator determineDefaultSegmentValue
+Oct 09, 2023 11:24:30 PM org.hibernate.id.enhanced.TableGenerator determineDefaultSegmentValue
 INFO: HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
-Oct 09, 2023 6:00:54 PM org.hibernate.id.enhanced.TableGenerator determineDefaultSegmentValue
+Oct 09, 2023 11:24:30 PM org.hibernate.id.enhanced.TableGenerator determineDefaultSegmentValue
 INFO: HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
-Oct 09, 2023 6:00:54 PM org.hibernate.id.enhanced.TableGenerator determineDefaultSegmentValue
+Oct 09, 2023 11:24:30 PM org.hibernate.id.enhanced.TableGenerator determineDefaultSegmentValue
 INFO: HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
-Oct 09, 2023 6:00:54 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
-INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@647e0411] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-Oct 09, 2023 6:00:54 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
-INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@9e85e53c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-Oct 09, 2023 6:00:54 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
+Oct 09, 2023 11:24:30 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4a1ae384] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Oct 09, 2023 11:24:30 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@f24cc2b3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Oct 09, 2023 11:24:30 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
 WARN: GenerationTarget encountered exception accepting command : Error executing DDL "
     insert into hibernate_sequences(sequence_name, next_val) values ('default',0)" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
@@ -126,7 +126,7 @@ Caused by: org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY 
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 76 more
 
-Oct 09, 2023 6:00:54 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
+Oct 09, 2023 11:24:30 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
 WARN: GenerationTarget encountered exception accepting command : Error executing DDL "
     insert into hibernate_sequences(sequence_name, next_val) values ('default',0)" via JDBC Statement
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
@@ -219,7 +219,7 @@ Caused by: org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_PRIMARYKEY] A PRIMARY 
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 76 more
 
-Oct 09, 2023 6:00:54 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
+Oct 09, 2023 11:24:30 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
 WARN: GenerationTarget encountered exception accepting command : Error executing DDL "
     alter table course 
        add constraint UK_4xqvdpkafb91tt3hsb67ga3fj unique (name)" via JDBC Statement
@@ -316,7 +316,7 @@ Caused by: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing datab
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 76 more
 
-Oct 09, 2023 6:00:54 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
+Oct 09, 2023 11:24:30 PM org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl handleException
 WARN: GenerationTarget encountered exception accepting command : Error executing DDL "
     alter table student 
        add constraint UK_1clrouh0iqmfd9tbcu50eib2 unique (index_number)" via JDBC Statement
@@ -413,9 +413,7 @@ Caused by: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing datab
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
 	... 76 more
 
-Oct 09, 2023 6:00:54 PM org.hibernate.tool.schema.internal.SchemaCreatorImpl applyImportSources
-INFO: HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1d97cd0'
-Oct 09, 2023 6:00:54 PM org.hibernate.hql.internal.QueryTranslatorFactoryInitiator initiateService
-INFO: HHH000397: Using ASTQueryTranslatorFactory
+Oct 09, 2023 11:24:30 PM org.hibernate.tool.schema.internal.SchemaCreatorImpl applyImportSources
+INFO: HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b5f1e050'
 ]]></system-err>
 </testsuite>
