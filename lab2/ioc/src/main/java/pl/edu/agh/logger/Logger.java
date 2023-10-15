@@ -1,5 +1,7 @@
 package pl.edu.agh.logger;
 
+import com.google.inject.Inject;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -15,7 +17,7 @@ public class Logger {
 
     public Logger() {
         init();
-        this.registeredSerializers = new HashSet<IMessageSerializer>();
+        this.registeredSerializers = new HashSet<>();
     }
 
     public Logger(Set<IMessageSerializer> registeredSerializers) {
@@ -32,6 +34,7 @@ public class Logger {
         return logger;
     }
 
+    @Inject
     public void registerSerializer(IMessageSerializer messageSerializer) {
         registeredSerializers.add(messageSerializer);
     }

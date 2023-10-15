@@ -1,14 +1,18 @@
 package pl.edu.agh.school;
 
+import com.google.inject.Inject;
+import pl.edu.agh.school.persistence.IPersistenceManager;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
 public class School {
 
-    private SchoolDAO schoolDAO;
+    private final SchoolDAO schoolDAO;
 
-    public School() {
-        this.schoolDAO = new SchoolDAO();
+    @Inject
+    public School(IPersistenceManager manager) {
+        this.schoolDAO = new SchoolDAO(manager);
     }
 
     public void addTeacher(Teacher teacher) {
