@@ -57,6 +57,6 @@ public class GalleryApp extends Application {
     private void fillGallery(Gallery gallery) {
         var photoDownloader = new PhotoDownloader();
         photoDownloader.getPhotoExamples()
-                .subscribe(gallery::addPhoto);
+            .subscribe(gallery::addPhoto);
     }
 }
