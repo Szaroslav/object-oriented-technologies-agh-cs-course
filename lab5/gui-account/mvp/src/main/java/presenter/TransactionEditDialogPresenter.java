@@ -4,7 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.util.converter.LocalDateStringConverter;
+import model.Category;
 import model.Transaction;
+
+import java.math.BigDecimal;
+import java.time.format.DateTimeFormatter;
 
 public class TransactionEditDialogPresenter {
 
@@ -41,19 +46,35 @@ public class TransactionEditDialogPresenter {
 	
 	@FXML
 	private void handleOkAction(ActionEvent event) {
-		// TODO: implement
+		updateModel();
+		approved = true;
+		dialogStage.close();
 	}
 	
 	@FXML
 	private void handleCancelAction(ActionEvent event) {
-		// TODO: implement
+		dialogStage.close();
 	}
 	
 	private void updateModel() {
-		// TODO: implement
+		LocalDateStringConverter converter = getDateConverter();
+		transaction.setDate(converter.fromString(dateTextField.getText()));
+		transaction.setPayee(payeeTextField.getText());
+		transaction.setCategory(new Category(categoryTextField.getText()));
+		transaction.setInflow(new BigDecimal(inflowTextField.getText()));
 	}
 	
 	private void updateControls() {
-		// TODO: implement
+		LocalDateStringConverter converter = getDateConverter();
+		dateTextField.setText(converter.toString(transaction.getDate()));
+		payeeTextField.setText(transaction.getPayee());
+		categoryTextField.setText(transaction.getCategory().getName());
+		inflowTextField.setText(transaction.getInflow().toString());
+	}
+
+	private LocalDateStringConverter getDateConverter() {
+		String pattern = "yyyy-MM-dd";
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+		return new LocalDateStringConverter(formatter, formatter);
 	}
 }
