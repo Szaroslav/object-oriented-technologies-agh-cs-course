@@ -39,6 +39,8 @@ public class AccountOverviewController {
 	private Button deleteButton;
 	@FXML
 	private Button editButton;
+	@FXML
+	private Button addButton;
 	
 	@FXML
 	private void initialize() {
@@ -65,6 +67,14 @@ public class AccountOverviewController {
 		Transaction transaction = transactionsTable.getSelectionModel().getSelectedItem();
 		if (transaction != null) {
 			appController.showTransactionEditDialog(transaction);
+		}
+	}
+
+	@FXML
+	private void handleAddAction(ActionEvent event) {
+		Transaction transaction = Transaction.newTransaction();
+		if (appController.showTransactionEditDialog(transaction)) {
+			data.addTransaction(transaction);
 		}
 	}
 
