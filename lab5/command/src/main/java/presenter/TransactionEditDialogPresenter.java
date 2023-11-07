@@ -80,7 +80,6 @@ public class TransactionEditDialogPresenter {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
     }
 
     private void updateControls() {
