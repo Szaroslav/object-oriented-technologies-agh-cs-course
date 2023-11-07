@@ -28,4 +28,15 @@ public class RemoveTransactionCommand implements Command {
         for (Transaction transaction : transactionsToRemove)
             account.removeTransaction(transaction);
     }
+
+    @Override
+    public void undo() {
+        for (Transaction transaction : transactionsToRemove)
+            account.addTransaction(transaction);
+    }
+
+    @Override
+    public void redo() {
+        execute();
+    }
 }

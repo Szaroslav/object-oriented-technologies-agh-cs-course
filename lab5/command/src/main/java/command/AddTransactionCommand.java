@@ -21,4 +21,14 @@ public class AddTransactionCommand implements Command {
     public void execute() {
         account.addTransaction(transactionToAdd);
     }
+
+    @Override
+    public void undo() {
+        account.removeTransaction(transactionToAdd);
+    }
+
+    @Override
+    public void redo() {
+        execute();
+    }
 }
