@@ -1,10 +1,7 @@
-package pl.edu.agh.to.school.service;
+package pl.edu.agh.to.school.student;
 
 import org.springframework.stereotype.Service;
-import pl.edu.agh.to.school.model.Student;
-import pl.edu.agh.to.school.repository.StudentRepository;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service

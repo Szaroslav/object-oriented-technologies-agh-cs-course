@@ -1,4 +1,4 @@
-package pl.edu.agh.to.school.model;
+package pl.edu.agh.to.school.student;
 
 import javax.persistence.*;
 import java.time.LocalDate;

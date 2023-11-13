@@ -1,5 +1,7 @@
 package pl.edu.agh.to.school.model;
 
+import pl.edu.agh.to.school.student.Student;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;

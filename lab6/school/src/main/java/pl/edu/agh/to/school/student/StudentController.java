@@ -1,12 +1,9 @@
-package pl.edu.agh.to.school.controller;
+package pl.edu.agh.to.school.student;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.edu.agh.to.school.model.Student;
-import pl.edu.agh.to.school.service.StudentService;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController

@@ -1,10 +1,8 @@
-package pl.edu.agh.to.school.configurator;
+package pl.edu.agh.to.school.student;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import pl.edu.agh.to.school.model.Student;
-import pl.edu.agh.to.school.repository.StudentRepository;
 
 import java.time.LocalDate;
 
